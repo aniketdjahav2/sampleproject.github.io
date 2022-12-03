@@ -24,7 +24,7 @@ public class controller {
 		 String solString= this.service.performOperation(in);
 		  return (ResponseEntity<T>) ResponseEntity.status(HttpStatus.ACCEPTED).body(solString);
 	  }
-	  @GetMapping("getoperation/{id}")
+	  @GetMapping("getoperation/{Id}")
 	  public Optional<input> getOperation(@PathVariable("Id") int Id) {
 		  System.out.println("inside controller");
 		  Optional<input> input=null;
