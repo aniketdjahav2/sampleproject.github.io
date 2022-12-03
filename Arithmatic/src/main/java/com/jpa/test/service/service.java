@@ -16,22 +16,26 @@ public class service {
 	public String performOperation(input in) {
 		// TODO Auto-generated method stub
 		int sol=0;
-		this.userRepo.save(in);
+		
 		if(in.getOperation().equalsIgnoreCase("addition")) {
 			 sol=in.getX()+in.getY();
-			return "Solution is"+sol;
+			 this.userRepo.save(in);
+			return "Solution is "+sol;
 		}
 		else if (in.getOperation().equalsIgnoreCase("substraction")) {
 			sol=in.getX()-in.getY();
-			return "Solution is"+sol;
+			this.userRepo.save(in);
+			return "Solution is "+sol;
 		}
 		else if (in.getOperation().equalsIgnoreCase("multipication")) {
 			sol=in.getX()*in.getY();
-			return "Solution is"+sol;
+			this.userRepo.save(in);
+			return "Solution is "+sol;
 		}
 		else if (in.getOperation().equalsIgnoreCase("division")) {
 			sol=in.getX()/in.getY();
-			return "Solution is"+sol;
+			this.userRepo.save(in);
+			return "Solution is "+sol;
 		}
 		else {
 			return"Invalid Operation entered";
